@@ -1,0 +1,138 @@
+/* ===================
+   Base Styles
+=================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  header,
+  nav,
+  main,
+  footer {
+    padding: 1rem;
+  }
+  
+  /* ===================
+     Header
+  =================== */
+  .header {
+    background: #4a90e2;
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* ===================
+     Navigation (Flexbox)
+  =================== */
+  .nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background: #333;
+  }
+  
+  .nav li {
+    margin: 0 1rem;
+  }
+  
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+  }
+  
+  .nav a:hover {
+    background: #555;
+    border-radius: 5px;
+  }
+  
+  /* ===================
+     Main Layout (Grid)
+  =================== */
+  .main-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .content {
+    background: #f4f4f4;
+    padding: 1rem;
+  }
+  
+  .sidebar {
+    background: #ddd;
+    padding: 1rem;
+  }
+  
+  /* ===================
+     Card Container (Flexbox inside Grid)
+  =================== */
+  .card-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    flex: 1;
+    min-width: 150px;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* ===================
+     Footer
+  =================== */
+  .footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+  
+  /* ===================
+     Media Queries
+  =================== */
+  
+  /* Tablets (max-width: 768px) */
+  @media (max-width: 768px) {
+    .main-layout {
+      grid-template-columns: 1fr;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  /* Mobile (max-width: 480px) */
+  @media (max-width: 480px) {
+    body {
+      font-size: 0.9rem;
+    }
+  
+    .card-container {
+      flex-direction: column;
+    }
+  
+    .nav ul {
+      font-size: 0.9rem;
+    }
+  }
+  
